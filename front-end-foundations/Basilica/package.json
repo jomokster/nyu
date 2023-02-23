@@ -1,0 +1,22 @@
+{
+  "name": "basilica",
+  "version": "1.0.0",
+  "description": "- [1. Basilica!](#1-basilica)   - [1.2. Homework](#12-homework)   - [1.3. Reading](#13-reading)   - [1.4. Goals](#14-goals)   - [1.5. Initialize GIT with .gitignore](#15-initialize-git-with-gitignore)   - [1.6. NPM Initialization and Installs](#16-npm-initialization-and-installs)   - [1.7. Basilica Project](#17-basilica-project)     - [1.7.1. Starter CSS](#171-starter-css)   - [1.8. Responsive Images](#18-responsive-images)   - [1.9. Flex Layout](#19-flex-layout)     - [1.9.1. Review: Pseudo-elements vs Pseudo-classes](#191-review-pseudo-elements-vs-pseudo-classes)   - [1.10. The Branding Header](#110-the-branding-header)     - [1.10.1. Header: Responsive Design](#1101-header-responsive-design)   - [1.11. Navigation](#111-navigation)     - [1.11.1. Button and Gradients](#1111-button-and-gradients)   - [1.12. CSS Grid](#112-css-grid)   - [1.13. Sass](#113-sass)     - [1.13.1. SASS Variables](#1131-sass-variables)     - [1.13.2. SASS Nesting](#1132-sass-nesting)     - [1.13.3. SASS Partials](#1133-sass-partials)     - [1.13.4. A Note on Refactoring](#1134-a-note-on-refactoring)   - [1.14. JavaScript](#114-javascript)     - [1.14.1. Aside: Demo Arrays in Node](#1141-aside-demo-arrays-in-node)     - [1.14.2. Add a Script](#1142-add-a-script)   - [1.15. JavaScript Popover](#115-javascript-popover)   - [1.16. DOM Scripting Methods Used](#116-dom-scripting-methods-used)     - [1.16.1. matches](#1161-matches)     - [1.16.2. Add Another Close Method](#1162-add-another-close-method)     - [Adding Animation to the Modal](#adding-animation-to-the-modal)   - [1.17. A Dynamic Popover](#117-a-dynamic-popover)   - [1.18. Notes](#118-notes)   - [1.19. Expressions](#119-expressions)   - [1.20. Statements](#120-statements)",
+  "main": "index.js",
+  "dependencies": {
+    "sass": "^1.58.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.27.11",
+    "concurrently": "^7.6.0",
+    "prettier": "^2.8.4",
+    "sass": "^1.58.1"
+  },
+  "scripts": {
+    "server": "browser-sync app -w",
+    "sass": "sass scss/styles.scss app/css/styles.css --watch --source-map",
+    "start": "npm run server & npm run sass"
+  },
+  "author": "",
+  "license": "ISC"
+}
