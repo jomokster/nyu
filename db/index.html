@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul></ul>
+
+    <form class="add-form" validation>
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name" required />
+
+      <label for="salary">Salary</label>
+      <input type="number" name="salary" id="salary" required />
+
+      <button type="submit">Add</button>
+    </form>
+
+    <script>
+      const addForm = document.querySelector(".add-form");
+
+      function addEmployee() {
+        const name = document.querySelector("#name").value;
+        const salary = document.querySelector("#salary").value;
+
+        fetch("http://localhost:3000/employees/", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name,
+            salary,
+          }),
+        })
+          .then((response) => response.json())
+          .then((json) => console.log("response", json));
+      }
+
+      function showEmployees(employees) {
+        employees.map((employee) => {
+          const li = document.createElement("li");
+          li.innerHTML = `${employee.name} - $${employee.salary}
+          <input type="checkbox" id=${employee.id} />
+          
+          `;
+          document.querySelector("ul").appendChild(li);
+        });
+
+        const deleteCheckboxes = document.querySelector("input[type=checkbox]");
+
+        // const deleteCheckboxes = document.querySelectorAll(
+        //   "input[type=checkbox]"
+        // );
+
+        deleteCheckboxes.addEventListener("change", (e) => {
+          console.log(e.target.id);
+        });
+      }
+
+      function getEmployees() {
+        fetch("http://localhost:3000/employees/")
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(data);
+            showEmployees(data);
+          });
+      }
+
+      getEmployees();
+    </script>
+  </body>
+</html>

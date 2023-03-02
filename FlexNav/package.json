@@ -1,0 +1,17 @@
+{
+  "name": "flexnav",
+  "version": "1.0.0",
+  "description": "just learnin",
+  "main": "index.js",
+  "scripts": {
+    "start": "browser-sync app -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.27.11"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.4"
+  }
+}
