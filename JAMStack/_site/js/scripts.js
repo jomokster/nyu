@@ -9,6 +9,13 @@ function getStories(event) {
     .then((data) => showData(data.results));
 }
 
+function getImageUrl(story) {
+  if (story == null) {
+    return "https://images.pexels.com/photos/14959678/pexels-photo-14959678.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+  }
+  return story.multimedia[0].url
+}
+
 function showData(stories) {
   stories.map((story) => console.log(story.multimedia[0].url))
 
