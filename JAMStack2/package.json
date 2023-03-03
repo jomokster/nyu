@@ -1,0 +1,14 @@
+{
+  "name": "jamstack",
+  "version": "1.0.0",
+  "description": "## Homework",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --serve"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.0"
+  }
+}
