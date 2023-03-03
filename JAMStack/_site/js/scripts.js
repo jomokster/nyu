@@ -10,7 +10,7 @@ function getStories(event) {
 }
 
 function showData(stories) {
-  stories.map((story) => console.log(story))
+  stories.map((story) => console.log(story.multimedia[0].url))
 
   var looped = stories
     .map(
