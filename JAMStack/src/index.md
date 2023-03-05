@@ -1,10 +1,10 @@
 ---
 layout: layout.html
-pageTitle: New York Today
+pageTitle: New York Times
 pageClass: home
 ---
 
-## Articles
+## Hardcover Fiction Best Sellers
 
 <div class="stories">Loading...</div>
 
